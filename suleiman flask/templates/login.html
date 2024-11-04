@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        /* Setter bakgrunnsfargen til svart med en mørk gradient-effekt */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #240a0a, #1a1a1a);
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Stiler for login-boksen */
+        .login-container {
+            background-color: #333;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        /* Stiler for felter */
+        input[type="text"], input[type="password"] {
+            width: 85%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        /* Stiler for knapper */
+        .login-btn, .new-user-btn, .view-users-btn {
+            width: 85%;
+            padding: 12px;
+            margin-top: 10px;
+            background-color: #1e1d1d;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Hover-effekt for knapper */
+        .login-btn:hover, .new-user-btn:hover, .view-users-btn:hover {
+            background-color: #666;
+        }
+
+        /* Justering for tekst */
+        h2 {
+            margin-bottom: 20px;
+            color: #560f0f;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Logg inn</h2>
+        <form action="/login" method="post">
+            <input type="text" name="username" placeholder="Brukernavn" required>
+            <input type="password" name="password" placeholder="Passord" required>
+            <button type="submit" class="login-btn">Logg inn</button>
+        </form>
+        
+        <!-- Knapp for å opprette ny bruker -->
+        <a href="/register" class="new-user-btn">Lag ny bruker</a>
+        
+        <!-- Knapp for å vise alle brukere -->
+        <a href="/view_users" class="view-users-btn">Vis alle brukere</a>
+    </div>
+</body>
+</html>
